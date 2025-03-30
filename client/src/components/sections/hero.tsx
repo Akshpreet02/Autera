@@ -47,7 +47,7 @@ export function Hero() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full md:py-4 md:text-lg md:px-10 border-secondary text-primary hover:bg-white/10 transition-colors duration-200"
+                      className="w-full md:py-4 md:text-lg md:px-10 border-secondary text-secondary hover:bg-secondary/10 transition-colors duration-200"
                     >
                       Learn More
                     </Button>
