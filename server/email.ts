@@ -1,4 +1,5 @@
 import mail from '@sendgrid/mail';
+import 'dotenv/config'
 
 if (!process.env.SENDGRID_API_KEY) {
   console.warn("SENDGRID_API_KEY environment variable is not set, emails will be logged but not sent");
