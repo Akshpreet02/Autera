@@ -2,7 +2,6 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { contactFormSchema } from "@shared/schema";
-import { sendEmail } from "./email";
 import { ZodError } from "zod";
 import { fromZodError } from "zod-validation-error";
 
@@ -21,28 +20,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         message: validatedData.message,
       });
       
-      // Send an email notification
-      const emailSent = await sendEmail({
-        to: "auteraconsulting@gmail.com", // Email address for contact form submissions
-        from: "no-reply@autera.com", // Important: this must be a verified sender in your SendGrid account
-        subject: `New Contact Form Submission from ${validatedData.name}`,
-        text: `
-Name: ${validatedData.name}
-Email: ${validatedData.email}
-Business: ${validatedData.business}
-
-Message:
-${validatedData.message}
-        `,
-        html: `
-<h3>New Contact Form Submission</h3>
-<p><strong>Name:</strong> ${validatedData.name}</p>
-<p><strong>Email:</strong> ${validatedData.email}</p>
-<p><strong>Business:</strong> ${validatedData.business}</p>
-<p><strong>Message:</strong></p>
-<p>${validatedData.message.replace(/\n/g, '<br>')}</p>
-        `,
-      });
+      // Email is now sent from the client side, we just store the contact
       
       res.status(200).json({ success: true, message: "Contact form submitted successfully" });
     } catch (error) {
@@ -65,6 +43,5 @@ ${validatedData.message}
   });
 
   const httpServer = createServer(app);
-
   return httpServer;
 }

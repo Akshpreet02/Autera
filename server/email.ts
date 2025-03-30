@@ -1,11 +1,8 @@
-import mail from '@sendgrid/mail';
 import 'dotenv/config'
 
-if (!process.env.SENDGRID_API_KEY) {
-  console.warn("SENDGRID_API_KEY environment variable is not set, emails will be logged but not sent");
-} else {
-  mail.setApiKey(process.env.SENDGRID_API_KEY);
-}
+// This file is kept for backwards compatibility
+// Email sending is now handled directly in the client
+// through the contact-form.tsx component
 
 interface EmailParams {
   to: string;
@@ -16,31 +13,7 @@ interface EmailParams {
 }
 
 export async function sendEmail(params: EmailParams): Promise<boolean> {
-  try {
-    // Log email for development purposes
-    console.log("--------- EMAIL DETAILS ---------");
-    console.log(`To: ${params.to}`);
-    console.log(`From: ${params.from}`);
-    console.log(`Subject: ${params.subject}`);
-    console.log("--------------------------------");
-    
-    if (process.env.SENDGRID_API_KEY) {
-      // Send the email using SendGrid if API key is available
-      await mail.send({
-        to: params.to,
-        from: params.from,
-        subject: params.subject,
-        text: params.text || '',
-        html: params.html || '',
-      });
-      console.log("Email sent successfully via SendGrid!");
-    } else {
-      console.log("SendGrid API key not found. Email would have been sent in production.");
-    }
-    
-    return true;
-  } catch (error) {
-    console.error("Error sending email:", error);
-    return false;
-  }
+  console.log("Email function called from server (for backward compatibility)");
+  console.log("Actual email sending is now handled in the client with Emailjs");
+  return true;
 }
