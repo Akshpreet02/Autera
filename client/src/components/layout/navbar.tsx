@@ -25,12 +25,12 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300">
+    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-md transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="bg-gradient-to-r from-primary-800 to-primary text-transparent bg-clip-text font-bold text-xl tracking-tight">AutomateAI</span>
+              <span className="text-primary-900 font-bold text-xl tracking-tight">AutomateAI</span>
             </Link>
           </div>
           
@@ -77,16 +77,16 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "md:hidden absolute w-full bg-white border-b border-gray-100 transform transition-all duration-300 ease-in-out",
-          mobileMenuOpen ? "opacity-100 translate-y-0 shadow-md" : "opacity-0 -translate-y-2 pointer-events-none"
+          "md:hidden absolute w-full bg-gray-900/95 backdrop-blur-sm transform transition-all duration-300 ease-in-out",
+          mobileMenuOpen ? "opacity-100 translate-y-0 shadow-lg" : "opacity-0 -translate-y-2 pointer-events-none"
         )}
       >
-        <div className="px-4 pt-2 pb-4 space-y-1">
+        <div className="px-4 pt-3 pb-5 space-y-1">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="block px-3 py-2 rounded-md text-base font-normal text-gray-600 hover:text-primary hover:bg-primary-50"
+              className="block px-3 py-2 rounded-md text-base font-normal text-gray-200 hover:text-white hover:bg-primary-900/50"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.label}
@@ -94,7 +94,7 @@ export function Navbar() {
           ))}
           <a
             href="#contact"
-            className="block w-full text-center px-4 py-2 border border-transparent text-base font-normal rounded-md text-white bg-primary hover:bg-primary/90 mt-4 shadow-sm"
+            className="block w-full text-center px-4 py-2 text-base font-normal rounded-md text-white bg-primary-700 hover:bg-primary-600 mt-6 shadow-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
             Get Started
