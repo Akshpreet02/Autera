@@ -43,8 +43,9 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  root: '.', // Ensure this points to where your index.html is
   build: {
-    outDir: 'dist', // Make sure this is 'dist', not 'dist/public'
+    outDir: 'dist',
   },
   resolve: {
     alias: {
