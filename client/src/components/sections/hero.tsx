@@ -23,11 +23,11 @@ export function Hero() {
             className="mx-auto max-w-7xl px-4 pt-10 sm:pt-12 sm:px-6 md:pt-16 lg:pt-20 lg:px-8 xl:pt-28"
           >
             <div className="sm:text-center lg:text-left">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-100 sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl tracking-tight font-extrabold sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">AI Automation for</span>{" "}
-                <span className="block text-gray-400 xl:inline">Small Businesses</span>
+                <span className="block text-primary xl:inline">Small Businesses</span>
               </h1>
-              <p className="mt-3 text-base text-muted-foreground sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              <p className="mt-3 text-base text-muted sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                 Transform your business with AI-powered automation solutions that save time,
                 reduce costs, and increase customer satisfaction.
               </p>
@@ -47,7 +47,7 @@ export function Hero() {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full md:py-4 md:text-lg md:px-10 border-gray-400 text-gray-300 hover:bg-gray-800 hover:text-gray-100 transition-colors duration-200"
+                      className="w-full md:py-4 md:text-lg md:px-10 border-secondary text-secondary hover:bg-secondary/10 hover:text-white transition-colors duration-200"
                     >
                       Learn More
                     </Button>

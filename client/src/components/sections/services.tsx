@@ -20,28 +20,28 @@ export function Services() {
       description:
         "AI-driven loyalty cards that learn customer preferences and boost retention through personalized offers.",
       icon: <Box className="h-6 w-6" />,
-      color: "bg-gray-700",
+      color: "bg-secondary",
     },
     {
       title: "Intelligent Appointment Scheduling",
       description:
         "Automated booking systems that optimize your staff's time and reduce scheduling conflicts.",
       icon: <Calendar className="h-6 w-6" />,
-      color: "bg-gray-700",
+      color: "bg-secondary",
     },
     {
       title: "Inventory Management",
       description:
         "Smart inventory systems that predict demand patterns and automatically reorder supplies.",
       icon: <BarChart3 className="h-6 w-6" />,
-      color: "bg-gray-700",
+      color: "bg-secondary",
     },
     {
       title: "Customer Service Chatbots",
       description:
         "24/7 AI assistants that handle customer inquiries, answer FAQs, and escalate complex issues.",
       icon: <MessageSquare className="h-6 w-6" />,
-      color: "bg-gray-700",
+      color: "bg-secondary",
     },
   ];
 
@@ -69,13 +69,13 @@ export function Services() {
           transition={{ duration: 0.5 }}
           className="lg:text-center"
         >
-          <h2 className="text-base text-gray-400 font-semibold tracking-wide uppercase">
+          <h2 className="text-base text-secondary font-semibold tracking-wide uppercase">
             Services
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl">
             Intelligent Automation Solutions
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-muted lg:mx-auto">
             We provide AI-powered automation tools tailored for small businesses across
             various industries.
           </p>
@@ -92,7 +92,7 @@ export function Services() {
               <motion.div
                 key={index}
                 variants={item}
-                className="relative bg-gray-900 p-6 rounded-lg shadow-sm border border-gray-800 hover:shadow-md transition-shadow duration-300"
+                className="relative bg-surface p-6 rounded-lg shadow-sm border border-gray-800 hover:shadow-md transition-shadow duration-300"
               >
                 <div className="absolute top-0 left-0 p-3">
                   <div
@@ -102,10 +102,10 @@ export function Services() {
                   </div>
                 </div>
                 <div className="ml-16">
-                  <h3 className="text-lg leading-6 font-medium text-gray-200">
+                  <h3 className="text-lg leading-6 font-medium text-primary">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-base text-muted-foreground">{service.description}</p>
+                  <p className="mt-2 text-base text-muted">{service.description}</p>
                 </div>
               </motion.div>
             ))}
