@@ -30,7 +30,7 @@ export function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="bg-gradient-to-r from-primary to-primary-600 text-transparent bg-clip-text font-semibold text-xl">AutomateAI</span>
+              <span className="bg-gradient-to-r from-primary-800 to-primary text-transparent bg-clip-text font-bold text-xl tracking-tight">AutomateAI</span>
             </Link>
           </div>
           

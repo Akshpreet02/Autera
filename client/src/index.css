@@ -23,4 +23,26 @@
   p {
     @apply font-normal leading-relaxed text-gray-600;
   }
+  
+  /* Light-dark theme sections */
+  .bg-dark {
+    @apply bg-gray-900 text-white;
+  }
+  
+  .bg-dark h2, .bg-dark h3 {
+    @apply text-white;
+  }
+  
+  .bg-dark p {
+    @apply text-gray-300;
+  }
+  
+  /* Add some subtle effects */
+  .glass-card {
+    @apply backdrop-blur-sm bg-white/90 dark:bg-gray-900/90 shadow-xl;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-800 to-primary text-transparent bg-clip-text;
+  }
 }
