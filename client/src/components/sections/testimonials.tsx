@@ -67,10 +67,10 @@ export function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">
+          <h2 className="text-base text-gray-400 font-semibold tracking-wide uppercase">
             Testimonials
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 sm:text-4xl">
             What Our Clients Say
           </p>
           <p className="mt-4 max-w-2xl text-xl text-muted-foreground mx-auto">
@@ -88,7 +88,7 @@ export function Testimonials() {
             <motion.div
               key={index}
               variants={item}
-              className="bg-card rounded-lg shadow-sm p-6 border border-gray-800 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-gray-900 rounded-lg shadow-sm p-6 border border-gray-800 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="flex items-center mb-4">
                 <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
@@ -99,7 +99,7 @@ export function Testimonials() {
                   />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-foreground">{testimonial.name}</h3>
+                  <h3 className="text-lg font-medium text-gray-200">{testimonial.name}</h3>
                   <p className="text-sm text-muted-foreground">
                     {testimonial.company}, {testimonial.role}
                   </p>

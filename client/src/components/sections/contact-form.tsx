@@ -62,10 +62,10 @@ export function ContactForm() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">
+          <h2 className="text-base text-gray-400 font-semibold tracking-wide uppercase">
             Contact Us
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 sm:text-4xl">
             Get in Touch
           </p>
           <p className="mt-4 max-w-2xl text-xl text-muted-foreground mx-auto">
@@ -79,7 +79,7 @@ export function ContactForm() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-card shadow-sm rounded-lg p-6 border border-gray-800"
+            className="bg-gray-900 shadow-sm rounded-lg p-6 border border-gray-800"
           >
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 gap-y-6">
@@ -93,7 +93,7 @@ export function ContactForm() {
                         <Input 
                           placeholder="John Doe" 
                           {...field} 
-                          className="py-3 px-4"
+                          className="py-3 px-4 bg-gray-800 border-gray-700"
                         />
                       </FormControl>
                       <FormMessage />
@@ -111,7 +111,7 @@ export function ContactForm() {
                         <Input 
                           placeholder="john@example.com" 
                           {...field} 
-                          className="py-3 px-4"
+                          className="py-3 px-4 bg-gray-800 border-gray-700"
                         />
                       </FormControl>
                       <FormMessage />
@@ -129,7 +129,7 @@ export function ContactForm() {
                         <Input 
                           placeholder="Your Business" 
                           {...field} 
-                          className="py-3 px-4"
+                          className="py-3 px-4 bg-gray-800 border-gray-700"
                         />
                       </FormControl>
                       <FormMessage />
@@ -148,7 +148,7 @@ export function ContactForm() {
                           placeholder="Tell us about your business and what you're looking for" 
                           rows={4} 
                           {...field}
-                          className="py-3 px-4" 
+                          className="py-3 px-4 bg-gray-800 border-gray-700" 
                         />
                       </FormControl>
                       <FormMessage />

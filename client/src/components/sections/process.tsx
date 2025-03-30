@@ -60,10 +60,10 @@ export function Process() {
           transition={{ duration: 0.5 }}
           className="lg:text-center"
         >
-          <h2 className="text-base text-primary font-semibold tracking-wide uppercase">
+          <h2 className="text-base text-gray-400 font-semibold tracking-wide uppercase">
             Our Process
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 sm:text-4xl">
             How We Implement AI Solutions
           </p>
           <p className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto">
@@ -86,10 +86,10 @@ export function Process() {
                   variants={item}
                   className="relative flex flex-col items-center mb-8 md:mb-0"
                 >
-                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary mb-4 z-10">
+                  <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gray-800 text-gray-300 mb-4 z-10">
                     {process.icon}
                   </div>
-                  <h3 className="text-lg font-medium text-foreground">{process.title}</h3>
+                  <h3 className="text-lg font-medium text-gray-200">{process.title}</h3>
                   <p className="mt-2 text-base text-muted-foreground text-center max-w-xs">
                     {process.description}
                   </p>
