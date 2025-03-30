@@ -20,7 +20,7 @@ export function CTA() {
             <span className="block">Ready to transform your business?</span>
             <span className="block text-secondary mt-2">Get started with AI automation today.</span>
           </h2>
-          <p className="mt-5 max-w-2xl mx-auto text-lg text-gray-200">
+          <p className="mt-5 max-w-2xl mx-auto text-lg text-white/80">
             Join hundreds of small businesses already saving time and money with our solutions.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
@@ -37,7 +37,7 @@ export function CTA() {
               <Button
                 variant="outline"
                 size="lg"
-                className="w-full sm:w-auto px-8 py-3 border border-white/30 text-base font-normal rounded-md text-white hover:bg-white/10 transition-colors duration-200"
+                className="w-full sm:w-auto px-8 py-3 border border-white text-base font-normal rounded-md text-white hover:bg-white/10 transition-colors duration-200"
               >
                 Learn More
               </Button>

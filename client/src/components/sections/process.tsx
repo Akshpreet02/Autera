@@ -52,7 +52,7 @@ export function Process() {
   };
 
   return (
-    <section className="py-12 bg-white" ref={ref}>
+    <section className="py-12 bg-background" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,10 +63,10 @@ export function Process() {
           <h2 className="text-base text-primary font-semibold tracking-wide uppercase">
             Our Process
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
             How We Implement AI Solutions
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto">
             Our streamlined approach ensures that you get custom AI solutions without complexity.
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ export function Process() {
             animate={isInView ? "show" : "hidden"}
             className="relative"
           >
-            <div className="hidden md:block absolute top-12 w-full border-t-2 border-gray-200"></div>
+            <div className="hidden md:block absolute top-12 w-full border-t-2 border-gray-800"></div>
             <div className="flex flex-wrap justify-around">
               {processes.map((process, index) => (
                 <motion.div
@@ -89,8 +89,8 @@ export function Process() {
                   <div className="flex items-center justify-center h-16 w-16 rounded-full bg-primary-100 text-primary mb-4 z-10">
                     {process.icon}
                   </div>
-                  <h3 className="text-lg font-medium text-gray-900">{process.title}</h3>
-                  <p className="mt-2 text-base text-gray-500 text-center max-w-xs">
+                  <h3 className="text-lg font-medium text-foreground">{process.title}</h3>
+                  <p className="mt-2 text-base text-muted-foreground text-center max-w-xs">
                     {process.description}
                   </p>
                 </motion.div>

@@ -61,7 +61,7 @@ export function Services() {
   };
 
   return (
-    <section className="py-12 bg-gray-50" id="services" ref={ref}>
+    <section className="py-12 bg-background" id="services" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export function Services() {
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
             Intelligent Automation Solutions
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-muted-foreground lg:mx-auto">
             We provide AI-powered automation tools tailored for small businesses across
             various industries.
           </p>
@@ -92,7 +92,7 @@ export function Services() {
               <motion.div
                 key={index}
                 variants={item}
-                className="relative bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300"
+                className="relative bg-card p-6 rounded-lg shadow-sm border border-gray-800 hover:shadow-md transition-shadow duration-300"
               >
                 <div className="absolute top-0 left-0 p-3">
                   <div
@@ -105,7 +105,7 @@ export function Services() {
                   <h3 className="text-lg leading-6 font-medium text-primary">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-base text-gray-600">{service.description}</p>
+                  <p className="mt-2 text-base text-muted-foreground">{service.description}</p>
                 </div>
               </motion.div>
             ))}

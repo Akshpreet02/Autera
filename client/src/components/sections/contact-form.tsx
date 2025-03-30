@@ -54,7 +54,7 @@ export function ContactForm() {
   }
 
   return (
-    <section className="py-12 bg-white" id="contact" ref={ref}>
+    <section className="py-12 bg-background" id="contact" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,7 @@ export function ContactForm() {
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
             Get in Touch
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-muted-foreground mx-auto">
             Ready to see how AI can transform your business? Send us a message and we'll
             get back to you within 24 hours.
           </p>
@@ -79,7 +79,7 @@ export function ContactForm() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white shadow-sm rounded-lg p-6 border border-gray-100"
+            className="bg-card shadow-sm rounded-lg p-6 border border-gray-800"
           >
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 gap-y-6">

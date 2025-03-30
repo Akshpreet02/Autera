@@ -25,7 +25,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
+    <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm shadow-md transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
@@ -40,7 +40,7 @@ export function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-600 hover:text-primary hover:bg-primary-50 px-4 py-2 rounded-md text-sm font-normal transition-colors duration-200"
+                className="text-foreground hover:text-primary hover:bg-primary/10 px-4 py-2 rounded-md text-sm font-normal transition-colors duration-200"
               >
                 {item.label}
               </a>
@@ -60,7 +60,7 @@ export function Navbar() {
           <div className="flex items-center md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-primary hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-200"
+              className="inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary/20"
               onClick={toggleMobileMenu}
               aria-expanded={mobileMenuOpen}
             >
@@ -77,7 +77,7 @@ export function Navbar() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "md:hidden absolute w-full bg-gray-900/95 backdrop-blur-sm transform transition-all duration-300 ease-in-out",
+          "md:hidden absolute w-full bg-background/95 backdrop-blur-sm transform transition-all duration-300 ease-in-out",
           mobileMenuOpen ? "opacity-100 translate-y-0 shadow-lg" : "opacity-0 -translate-y-2 pointer-events-none"
         )}
       >
@@ -86,7 +86,7 @@ export function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="block px-3 py-2 rounded-md text-base font-normal text-gray-200 hover:text-white hover:bg-primary-900/50"
+              className="block px-3 py-2 rounded-md text-base font-normal text-foreground hover:text-primary hover:bg-primary/10"
               onClick={() => setMobileMenuOpen(false)}
             >
               {item.label}

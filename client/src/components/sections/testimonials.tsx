@@ -59,7 +59,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="py-12 bg-gray-50" id="testimonials" ref={ref}>
+    <section className="py-12 bg-background" id="testimonials" ref={ref}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -70,10 +70,10 @@ export function Testimonials() {
           <h2 className="text-base text-primary font-semibold tracking-wide uppercase">
             Testimonials
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
             What Our Clients Say
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-muted-foreground mx-auto">
             Discover how our AI solutions have transformed small businesses like yours.
           </p>
         </motion.div>
@@ -88,7 +88,7 @@ export function Testimonials() {
             <motion.div
               key={index}
               variants={item}
-              className="bg-white rounded-lg shadow-sm p-6 border border-gray-100 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+              className="bg-card rounded-lg shadow-sm p-6 border border-gray-800 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="flex items-center mb-4">
                 <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex-shrink-0">
@@ -99,8 +99,8 @@ export function Testimonials() {
                   />
                 </div>
                 <div className="ml-4">
-                  <h3 className="text-lg font-medium text-gray-900">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-500">
+                  <h3 className="text-lg font-medium text-foreground">{testimonial.name}</h3>
+                  <p className="text-sm text-muted-foreground">
                     {testimonial.company}, {testimonial.role}
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export function Testimonials() {
               <div className="mb-4">
                 <StarRating rating={testimonial.rating} />
               </div>
-              <p className="text-gray-600 italic">{testimonial.quote}</p>
+              <p className="text-muted-foreground italic">{testimonial.quote}</p>
             </motion.div>
           ))}
         </motion.div>
