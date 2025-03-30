@@ -24,7 +24,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Send an email notification
       const emailSent = await sendEmail({
         to: "your-email@example.com", // Replace with your actual email address
-        from: "no-reply@automateai.com", // Important: this must be a verified sender in your SendGrid account
+        from: "no-reply@autera.com", // Important: this must be a verified sender in your SendGrid account
         subject: `New Contact Form Submission from ${validatedData.name}`,
         text: `
 Name: ${validatedData.name}

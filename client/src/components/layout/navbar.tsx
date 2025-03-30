@@ -25,12 +25,12 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm shadow-md transition-all duration-300">
+    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-primary-900 font-bold text-xl tracking-tight">AutomateAI</span>
+              <span className="text-primary font-bold text-xl tracking-tight">Autera</span>
             </Link>
           </div>
           
@@ -49,7 +49,7 @@ export function Navbar() {
               <Button 
                 variant="default" 
                 size="sm"
-                className="font-normal shadow-sm hover:shadow transition-all duration-200"
+                className="btn-cta font-normal shadow-sm hover:shadow transition-all duration-200"
               >
                 Get Started
               </Button>
@@ -94,7 +94,7 @@ export function Navbar() {
           ))}
           <a
             href="#contact"
-            className="block w-full text-center px-4 py-2 text-base font-normal rounded-md text-white bg-primary-700 hover:bg-primary-600 mt-6 shadow-lg"
+            className="block w-full text-center px-4 py-2 text-base font-normal rounded-md text-white btn-cta mt-6 shadow-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
             Get Started

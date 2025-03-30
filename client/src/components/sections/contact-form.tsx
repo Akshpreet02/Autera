@@ -43,7 +43,7 @@ export function ContactForm() {
     onError: (error) => {
       toast({
         title: "Error",
-        description: `Something went wrong. Please try again or contact us directly at contact@automateai.com (${error.message})`,
+        description: `Something went wrong. Please try again or contact us directly at contact@autera.com (${error.message})`,
         variant: "destructive",
       });
     },
@@ -65,7 +65,7 @@ export function ContactForm() {
           <h2 className="text-base text-primary font-semibold tracking-wide uppercase">
             Contact Us
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
             Get in Touch
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
@@ -160,7 +160,7 @@ export function ContactForm() {
                   <Button 
                     type="submit" 
                     disabled={isPending}
-                    className="inline-flex justify-center py-3 px-6 font-medium"
+                    className="btn-cta inline-flex justify-center py-3 px-6 font-medium"
                   >
                     {isPending ? (
                       <>

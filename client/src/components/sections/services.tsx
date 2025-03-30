@@ -27,14 +27,14 @@ export function Services() {
       description:
         "Automated booking systems that optimize your staff's time and reduce scheduling conflicts.",
       icon: <Calendar className="h-6 w-6" />,
-      color: "bg-purple-500",
+      color: "bg-secondary",
     },
     {
       title: "Inventory Management",
       description:
         "Smart inventory systems that predict demand patterns and automatically reorder supplies.",
       icon: <BarChart3 className="h-6 w-6" />,
-      color: "bg-emerald-500",
+      color: "bg-accent",
     },
     {
       title: "Customer Service Chatbots",
@@ -72,7 +72,7 @@ export function Services() {
           <h2 className="text-base text-primary font-semibold tracking-wide uppercase">
             Services
           </h2>
-          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-primary sm:text-4xl">
             Intelligent Automation Solutions
           </p>
           <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
@@ -102,10 +102,10 @@ export function Services() {
                   </div>
                 </div>
                 <div className="ml-16">
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
+                  <h3 className="text-lg leading-6 font-medium text-primary">
                     {service.title}
                   </h3>
-                  <p className="mt-2 text-base text-gray-500">{service.description}</p>
+                  <p className="mt-2 text-base text-gray-600">{service.description}</p>
                 </div>
               </motion.div>
             ))}

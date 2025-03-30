@@ -3,12 +3,12 @@ import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900">
+    <footer className="bg-primary">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <Link href="/" className="text-white font-bold text-xl">
-              AutomateAI
+              Autera
             </Link>
             <p className="text-gray-300 text-base">
               Transforming small businesses with AI-powered automation solutions.
@@ -140,7 +140,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-gray-700 pt-8">
           <p className="text-base text-gray-400 xl:text-center">
-            &copy; {new Date().getFullYear()} AutomateAI, Inc. All rights reserved.
+            &copy; {new Date().getFullYear()} Autera, Inc. All rights reserved.
           </p>
         </div>
       </div>
