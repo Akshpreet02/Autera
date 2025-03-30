@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -11,14 +11,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { contactFormSchema } from "@shared/schema";
 
-// Emailjs configuration
-const EMAILJS_SERVICE_ID = 'service_cyj8yeh'; // replace with your service ID
-const EMAILJS_TEMPLATE_ID = 'template_ygy1nbu'; // replace with your template ID
-const EMAILJS_PUBLIC_KEY = 'Gy6kjSrzpaQznvbx1'; // replace with your public key
-
 export function ContactForm() {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
@@ -34,31 +30,13 @@ export function ContactForm() {
     setLoading(true);
     
     try {
-      // Prepare template parameters for emailjs
-      const templateParams = {
-        name: values.name,
-        email: values.email,
-        business: values.business,
-        message: values.message,
-        to_email: 'auteraconsulting@gmail.com' // The email to receive contacts
-      };
-      
-      // Send email using emailjs
-      const result = await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
+      // Send email using emailjs directly on the client side
+      const result = await emailjs.sendForm(
+        'service_cyj8yeh', // replace with your EmailJS service ID
+        'template_ygy1nbu', // replace with your EmailJS template ID
+        formRef.current!,
+        'Gy6kjSrzpaQznvbx1' // replace with your EmailJS public key
       );
-      
-      // Also save to database through API (keeping backend functionality)
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
-      });
       
       toast({
         title: "Message sent!",
@@ -106,7 +84,7 @@ export function ContactForm() {
           <div className="mt-12 lg:mt-0">
             <div className="glass-card rounded-lg p-8">
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
                     control={form.control}
                     name="name"
@@ -163,6 +141,8 @@ export function ContactForm() {
                       </FormItem>
                     )}
                   />
+                  {/* Add a hidden input to store the recipient's email */}
+                  <input type="hidden" name="to_email" value="auteraconsulting@gmail.com" />
                   <Button type="submit" className="w-full" disabled={loading}>
                     {loading ? "Sending..." : "Send Message"}
                   </Button>

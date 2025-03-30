@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-"scripts": {
+  "scripts": {
   "dev": "vite",
   "build": "vite build",
-  "preview": "vite preview",
-  "netlify:build": "vite build && cp -r server netlify/functions/ && cp -r shared netlify/functions/"
+  "preview": "vite preview"
 },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -44,10 +43,12 @@
     "@replit/vite-plugin-shadcn-theme-json": "^0.0.4",
     "@sendgrid/mail": "^8.1.4",
     "@tanstack/react-query": "^5.60.5",
+    "body-parser": "^1.20.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
     "connect-pg-simple": "^10.0.0",
+    "cors": "^2.8.5",
     "date-fns": "^3.6.0",
     "dotenv": "^16.4.7",
     "drizzle-orm": "^0.39.1",
@@ -75,9 +76,7 @@
     "wouter": "^3.3.5",
     "ws": "^8.18.0",
     "zod": "^3.23.8",
-    "zod-validation-error": "^3.4.0",
-    "cors": "^2.8.5",
-    "body-parser": "^1.20.2"
+    "zod-validation-error": "^3.4.0"
   },
   "devDependencies": {
     "@replit/vite-plugin-cartographer": "^0.0.11",
