@@ -43,7 +43,7 @@ export function ContactForm() {
     onError: (error) => {
       toast({
         title: "Error",
-        description: `Something went wrong. Please try again or contact us directly at contact@autera.com (${error.message})`,
+        description: `Something went wrong. Please try again or contact us directly at auteraconsulting@gmail.com (${error.message})`,
         variant: "destructive",
       });
     },

@@ -23,7 +23,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       // Send an email notification
       const emailSent = await sendEmail({
-        to: "contact@autera.com", // Replace with your actual email address when deploying
+        to: "auteraconsulting@gmail.com", // Email address for contact form submissions
         from: "no-reply@autera.com", // Important: this must be a verified sender in your SendGrid account
         subject: `New Contact Form Submission from ${validatedData.name}`,
         text: `
