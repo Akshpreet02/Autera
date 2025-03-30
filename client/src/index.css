@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,7 +8,7 @@
   --color-primary: #63B3ED;
   --color-secondary: #38B2AC;
   --color-accent: #9AE6B4;
-  --color-background: #3A4049;
+  --color-background: #4A5568;
   --color-surface: #2D3748;
   --color-text: #E2E8F0;
   --color-muted: #A0AEC0;
@@ -22,7 +24,8 @@
   }
 
   body {
-    @apply font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply antialiased;
     background-color: var(--color-background);
     color: var(--color-text);
   }
@@ -34,6 +37,7 @@
   }
   
   h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
     @apply font-medium tracking-tight;
     color: var(--color-text);
   }
@@ -56,7 +60,7 @@
   
   .bg-accent {
     background-color: var(--color-accent) !important;
-    color: #3A4049;
+    color: #4A5061;
   }
   
   .bg-surface {
@@ -105,7 +109,7 @@
   /* CTA button styling */
   .btn-cta {
     background-color: var(--color-accent);
-    color: #3A4049;
+    color: #4A5061;
     font-weight: 500;
     @apply hover:shadow-lg transition-all duration-300;
   }
